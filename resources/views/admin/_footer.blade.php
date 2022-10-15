@@ -1,4 +1,3 @@
-
 <footer class="main-footer">
     <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
     All rights reserved.
@@ -49,7 +48,4 @@
 <script src="{{ asset('assets')}}/admin/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('assets')}}/admin/dist/js/demo.js"></script>
-
-
-
 

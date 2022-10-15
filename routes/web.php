@@ -30,6 +30,10 @@ Route::get('/',function (){
 //Admin
 Route::get('/admin',[\App\Http\Controllers\Admin\HomeController::class, 'index'])->name('admin_home');
 
+Route::get('/admin/login', [HomeController::class, 'login'])->name('admin_login');
+Route::post('/admin/logincheck', [HomeController::class, 'logincheck'])->name('admin_logincheck');
+Route::get('/admin/logout', [HomeController::class, 'logout'])->name('logout');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
