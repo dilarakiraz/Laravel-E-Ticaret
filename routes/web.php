@@ -28,9 +28,17 @@ Route::get('/',function (){
 });
 
 //Admin
-Route::get('/admin',[\App\Http\Controllers\Admin\HomeController::class, 'index'])->name('admin_home');
+Route::middleware('auth')->prefix('admin')->group(function (){ //prefix ile ön ad ekleme,gruplama
+    Route::get('/',[\App\Http\Controllers\Admin\HomeController::class, 'index'])->name('admin_home');
 
-Route::get('/admin/login', [HomeController::class, 'login'])->name('admin_login');
+    Route::get('category',[\App\Http\Controllers\Admin\CategoryController::class, 'index'])->name('admin_category');
+    Route::get('category/add',[\App\Http\Controllers\Admin\CategoryController::class, 'add'])->name('admin_category_add');
+    Route::get('category/update',[\App\Http\Controllers\Admin\CategoryController::class, 'update'])->name('admin_category_update');
+    Route::get('category/delete',[\App\Http\Controllers\Admin\CategoryController::class,'destroy'])->name('admin_category_delete');
+    Route::get('category/show',[\App\Http\Controllers\Admin\CategoryController::class, 'show'])->name('admin_category_show');
+});
+
+Route::get('/admin/login', [HomeController::class, 'login'])->name('admin_login'); //sayfa çağırırken get
 Route::post('/admin/logincheck', [HomeController::class, 'logincheck'])->name('admin_logincheck');
 Route::get('/admin/logout', [HomeController::class, 'logout'])->name('logout');
 
