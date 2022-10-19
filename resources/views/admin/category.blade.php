@@ -27,6 +27,11 @@
 
             <!-- Default box -->
             <div class="card">
+                <div class="card-header">
+                    <a href="{{route('admin_category_add')}}"  type="button" class="btn btn-block btn-info" style="width: 200px">Add Category</a>
+                </div>
+                <div class="card">
+
                 <!-- /.card-header -->
                 <div class="card-body">
 
@@ -46,10 +51,11 @@
                         @foreach ( $datalist  as $rs)
                             <tr>
                                 <td> {{ $rs->id}}</td>
-
-
+                                <td> {{ $rs->parent_id }}</td>
                                 <td>{{ $rs->title}}</td>
                                 <td>{{ $rs->status}}</td>
+                                <td>Edit</td>
+                                <td><a href="{{route('admin_category_delete', ['id' => $rs->id])}}" onclick="return confirm('Delete ! Are you sure?')" >Delete</a></td>
 
                             </tr>
                         @endforeach
