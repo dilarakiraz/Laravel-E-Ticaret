@@ -1,7 +1,14 @@
 @extends('layouts.admin')
 
-@section('title', 'Add Product')
+@section('title', 'Edit Product')
+@section('javascript')
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- include summernote css/js -->
 
+    <!--ürün açıklaması gibi uzun metin isteyen şeylerde kullanabilmek için summernote adlı zengin metin içeriğini uygulamaya entegre ettim-->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+@endsection
 @section('content')
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -81,11 +88,24 @@
                             </div>
                             <div class="form-group">
                                 <label >Detail</label>
-                                <input type="text" name="detail" value="{{$data ->detail}}" class="form-control"   >
+                                <textarea id="detail" name="detail">{{$data ->detail}}</textarea>  <!--summernote form içindeki kullanımı-->
+                                <script>
+                                    $(document).ready(function() {
+                                        $('#detail').summernote();
+                                    });
+                                </script>
                             </div>
                             <div class="form-group">
                                 <label  >Slug</label>
                                 <input type="text" name="slug" value="{{$data -> slug}}" class="form-control"   >
+                            </div>
+                            <div class="form-group">
+                                <label  >Image</label>
+                                <input type="file" name="image" value="{{$data -> image}}" class="form-control"   >
+
+                                @if($data ->image)
+                                    <img src="{{ Storage ::url($data->image)}}" height="" alt="">
+                                @endif
                             </div>
                             <div class="form-group">
                                 <label>Status</label>
