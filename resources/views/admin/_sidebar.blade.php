@@ -41,7 +41,7 @@
                 </li>
 
                 <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
+                    <a href="{{route('admin_products')}}" class="nav-link">
                         <p>
                             <i class="nav-icon fas fa-copy"></i>
                             Products
