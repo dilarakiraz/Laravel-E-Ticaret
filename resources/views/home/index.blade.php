@@ -1,6 +1,6 @@
 @extends('layouts.home')
 
-@section('title', 'E-Ticaret Sitesi')
+@section('title', 'Kitap Kurdu')
 @section('description')
     Türkiye'nin en güvenilir e-ticaret sitesi
 @endsection
@@ -21,7 +21,7 @@
                     <a class="banner banner-1" href="#">
                         <img src="{{ asset('assets')}}/img/banner10.jpg" alt="">
                         <div class="banner-caption text-center">
-                            <h2 class="white-color">NEW COLLECTION</h2>
+                            <h2 class="white-color">YENİ KOLEKSİYONLAR</h2>
                         </div>
                     </a>
                 </div>
@@ -32,7 +32,7 @@
                     <a class="banner banner-1" href="#">
                         <img src="{{ asset('assets')}}/img/banner11.jpg" alt="">
                         <div class="banner-caption text-center">
-                            <h2 class="white-color">NEW COLLECTION</h2>
+                            <h2 class="white-color">YENİ KOLEKSİYONLAR</h2>
                         </div>
                     </a>
                 </div>
@@ -43,7 +43,7 @@
                     <a class="banner banner-1" href="#">
                         <img src="{{ asset('assets')}}/img/banner12.jpg" alt="">
                         <div class="banner-caption text-center">
-                            <h2 class="white-color">NEW COLLECTION</h2>
+                            <h2 class="white-color">YENİ KOLEKSİYONLAR</h2>
                         </div>
                     </a>
                 </div>
@@ -78,8 +78,8 @@
                     <div class="banner banner-2">
                         <img src="{{ asset('assets')}}/img/banner14.jpg" alt="">
                         <div class="banner-caption">
-                            <h2 class="white-color">NEW<br>COLLECTION</h2>
-                            <button class="primary-btn">Shop Now</button>
+                            <h2 class="white-color">YENİ<br>KOLEKSİYON</h2>
+                            <button class="primary-btn">Şimdi Alışveriş Yap</button>
                         </div>
                     </div>
                 </div>
@@ -413,7 +413,7 @@
                         <img src="{{ asset('assets')}}/img/banner13.jpg" alt="">
                         <div class="banner-caption text-center">
                             <h1 class="primary-color">HOT DEAL<br><span class="white-color font-weak">Up to 50% OFF</span></h1>
-                            <button class="primary-btn">Shop Now</button>
+                            <button class="primary-btn">Şimdi Alışveriş Yap</button>
                         </div>
                     </div>
                 </div>
@@ -424,7 +424,7 @@
                     <a class="banner banner-1" href="#">
                         <img src="{{ asset('assets')}}/img/banner11.jpg" alt="">
                         <div class="banner-caption text-center">
-                            <h2 class="white-color">NEW COLLECTION</h2>
+                            <h2 class="white-color">Yeni Koleksiyon</h2>
                         </div>
                     </a>
                 </div>
@@ -589,8 +589,8 @@
                     <div class="banner banner-2">
                         <img src="{{ asset('assets')}}/img/banner15.jpg" alt="">
                         <div class="banner-caption">
-                            <h2 class="white-color">NEW<br>COLLECTION</h2>
-                            <button class="primary-btn">Shop Now</button>
+                            <h2 class="white-color">YENİ<br>KOLEKSİYON</h2>
+                            <button class="primary-btn">Şimdi Alışveriş Yap</button>
                         </div>
                     </div>
                 </div>

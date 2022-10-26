@@ -1,21 +1,21 @@
 <!-- category nav -->
 <div class="category-nav">
-    <span class="category-header">Categories <i class="fa fa-list"></i></span>
+    <span class="category-header">Kategoriler <i class="fa fa-list"></i></span>
     <ul class="category-list">
 
         <li class="dropdown side-dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Women’s Clothing <i class="fa fa-angle-right"></i></a>
+            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Kadın Giyim <i class="fa fa-angle-right"></i></a>
             <div class="custom-menu">
                 <div class="row">
                     <div class="col-md-4">
                         <ul class="list-links">
                             <li>
                                 <h3 class="list-links-title">AAAAA</h3></li>
-                            <li><a href="#">Women’s Clothing</a></li>
-                            <li><a href="#">Men’s Clothing</a></li>
-                            <li><a href="#">Phones & Accessories</a></li>
-                            <li><a href="#">Jewelry & Watches</a></li>
-                            <li><a href="#">Bags & Shoes</a></li>
+                            <li><a href="#">Kadın Giyim</a></li>
+                            <li><a href="#">Erkek Giyim</a></li>
+                            <li><a href="#">Aksesuar</a></li>
+                            <li><a href="#">Takı & Saat</a></li>
+                            <li><a href="#">Çanta & Ayakkabı</a></li>
                         </ul>
                         <hr class="hidden-md hidden-lg">
                     </div>
@@ -23,11 +23,11 @@
                         <ul class="list-links">
                             <li>
                                 <h3 class="list-links-title">BBBB</h3></li>
-                            <li><a href="#">Women’s Clothing</a></li>
-                            <li><a href="#">Men’s Clothing</a></li>
-                            <li><a href="#">Phones & Accessories</a></li>
-                            <li><a href="#">Jewelry & Watches</a></li>
-                            <li><a href="#">Bags & Shoes</a></li>
+                            <li><a href="#">Kadın Giyim</a></li>
+                            <li><a href="#">Erkek Giyim</a></li>
+                            <li><a href="#">Aksesuar</a></li>
+                            <li><a href="#">Takı & Saat</a></li>
+                            <li><a href="#">Çanta & Ayakkabı</a></li>
                         </ul>
                         <hr class="hidden-md hidden-lg">
                     </div>
@@ -36,7 +36,7 @@
                             <li>
                                 <h3 class="list-links-title">CCCCC</h3></li>
                             <li><a href="#">Women’s Clothing</a></li>
-                            <li><a href="#">Men’s Clothing</a></li>
+                            <li><a href="#">Erkek Giyim</a></li>
                             <li><a href="#">Phones & Accessories</a></li>
                             <li><a href="#">Jewelry & Watches</a></li>
                             <li><a href="#">Bags & Shoes</a></li>
@@ -48,7 +48,7 @@
 
 
         <li><a href="#">Men’s Clothing</a></li>
-        <li class="dropdown side-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Phones & Accessories <i class="fa fa-angle-right"></i></a>
+        <li class="dropdown side-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Telefon & Aksesuar <i class="fa fa-angle-right"></i></a>
             <div class="custom-menu">
                 <div class="row">
                     <div class="col-md-4">
@@ -108,7 +108,7 @@
         <li><a href="#">Computer & Office</a></li>
         <li><a href="#">Consumer Electronics</a></li>
         <li class="dropdown side-dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Jewelry & Watches <i class="fa fa-angle-right"></i></a>
+            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Takı & Saat <i class="fa fa-angle-right"></i></a>
             <div class="custom-menu">
                 <div class="row">
                     <div class="col-md-4">
