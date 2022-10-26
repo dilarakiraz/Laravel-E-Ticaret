@@ -63,6 +63,7 @@
                                     <img src="{{ Storage::url($rs->image) }}" height="30" alt="">
                                     @endif
                                 </td>
+                                <td><a href="{{route('admin_image_add',['product_id' => $rs->id])}}"><img src="{{asset('assets/admin/images')}}/imagegallery.png " height="25"></a></td>
                                 <td>{{ $rs->status}}</td>
                                 <td><a href="{{route('admin_product_edit', ['id' => $rs->id])}}" >Edit</a></td>
                                 <td><a href="{{route('admin_product_delete', ['id' => $rs->id])}}" onclick="return confirm('Delete ! Are you sure?')" >Delete</a></td>
