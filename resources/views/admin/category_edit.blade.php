@@ -87,8 +87,6 @@
                     </form>
 
 
-
-
                     <!-- /.card-body -->
                     <div class="card-footer">
                         ..
@@ -97,7 +95,6 @@
                 </div>
                 <!-- /.card -->
 
-        </section>
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->

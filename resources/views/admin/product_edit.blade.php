@@ -41,7 +41,7 @@
                 <div class="card-body">
 
                     <!-- form start -->
-                    <form role="form" action="{{route('admin_product_update',['id' =>$data->id])}}" method="post">
+                    <form role="form" action="{{route('admin_product_update',['id' =>$data->id])}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
@@ -107,6 +107,8 @@
                                     <img src="{{ Storage ::url($data->image)}}" height="" alt="">
                                 @endif
                             </div>
+
+
                             <div class="form-group">
                                 <label>Status</label>
                                 <select class="form-control select2" name="status" style="width: 100%;">

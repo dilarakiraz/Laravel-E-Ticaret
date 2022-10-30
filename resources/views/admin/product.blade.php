@@ -21,10 +21,8 @@
                 </div>
             </div><!-- /.container-fluid -->
         </section>
-
         <!-- Main content -->
         <section class="content">
-
             <!-- Default box -->
             <div class="card">
                 <div class="card-header">
@@ -34,8 +32,6 @@
 
                 <!-- /.card-header -->
                 <div class="card-body">
-
-
                     <table id="example1" class="table table-bordered table-striped">
                         <thead>
                         <tr>
@@ -65,9 +61,8 @@
                                 </td>
                                 <td><a href="{{route('admin_image_add',['product_id' => $rs->id])}}"><img src="{{asset('assets/admin/images')}}/imagegallery.png " height="25"></a></td>
                                 <td>{{ $rs->status}}</td>
-                                <td><a href="{{route('admin_product_edit', ['id' => $rs->id])}}" >Edit</a></td>
-                                <td><a href="{{route('admin_product_delete', ['id' => $rs->id])}}" onclick="return confirm('Delete ! Are you sure?')" >Delete</a></td>
-
+                                <td><a href="{{route('admin_product_edit', ['id' => $rs->id])}}" ><img src="{{asset('assets/admin/images')}}/edit.png" height="25"></a></td>
+                                <td><a href="{{route('admin_product_delete', ['id' => $rs->id])}}" onclick="return confirm('Delete ! Are you sure?')" ><img src="{{asset('assets/admin/images')}}/delete.jpg" height="25"></a></td>
                             </tr>
                         @endforeach
                     </table>
@@ -75,7 +70,6 @@
                 <!-- /.card-body -->
             </div>
             <!-- /.card -->
-
             <!-- /.card-body -->
             <div class="card-footer">
                 Footer
@@ -83,14 +77,11 @@
             <!-- /.card-footer-->
             </div>
     <!-- /.card -->
-
     </section>
     <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-
 @endsection
-
 @section('footer')
     <script src="{{ asset('assets')}}/admin/plugins/jquery-knob/jquery.knob.min.js"></script>
     <script src="{{ asset('assets')}}/admin/plugins/datatables/jquery.dataTables.min.js"></script>
