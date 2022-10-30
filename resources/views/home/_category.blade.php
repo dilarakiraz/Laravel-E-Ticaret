@@ -4,7 +4,7 @@
     <ul class="category-list">
 
         <li class="dropdown side-dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Kadın Giyim <i class="fa fa-angle-right"></i></a>
+            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Edebiyat Kitapları<i class="fa fa-angle-right"></i></a>
             <div class="custom-menu">
                 <div class="row">
                     <div class="col-md-4">
@@ -47,8 +47,8 @@
         </li>
 
 
-        <li><a href="#">Men’s Clothing</a></li>
-        <li class="dropdown side-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Telefon & Aksesuar <i class="fa fa-angle-right"></i></a>
+        <li><a href="#">Çocuk Kitapları</a></li>
+        <li class="dropdown side-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Fantastik <i class="fa fa-angle-right"></i></a>
             <div class="custom-menu">
                 <div class="row">
                     <div class="col-md-4">
@@ -105,10 +105,10 @@
                 </div>
             </div>
         </li>
-        <li><a href="#">Computer & Office</a></li>
-        <li><a href="#">Consumer Electronics</a></li>
+        <li><a href="#">Psikolojik Kitaplar</a></li>
+        <li><a href="#">Sağlık Kitapları</a></li>
         <li class="dropdown side-dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Takı & Saat <i class="fa fa-angle-right"></i></a>
+            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Gezi & Rehber Kitapları<i class="fa fa-angle-right"></i></a>
             <div class="custom-menu">
                 <div class="row">
                     <div class="col-md-4">
@@ -179,8 +179,7 @@
                 </div>
             </div>
         </li>
-        <li><a href="#">Bags & Shoes</a></li>
-        <li><a href="#">View All</a></li>
+        <li><a href="#">Tarih Kitapları</a></li>
     </ul>
 </div>
 <!-- /category nav -->
