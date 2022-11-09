@@ -46,7 +46,7 @@
                                     <option value="0" selected="selected">Main Category</option>
                                     @foreach($datalist as $rs)
                                         <option value="{{$rs->id}}"  @if ($rs->id == $data->parent_id)  selected="selected"  @endif >
-                                            {{$rs->title}}
+                                            {{\App\Http\Controllers\Admin\CategoryController::getParentsTree($rs,$rs->title)}}
                                         </option>
                                     @endforeach
                                 </select>
