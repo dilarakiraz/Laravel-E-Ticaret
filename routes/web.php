@@ -20,8 +20,18 @@ Route::get('/home2', function () {
 
 Route::redirect('/anasayfa','/home')->name('anasayfa');
 
+//Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
+Route::get('/references', [HomeController::class, 'references'])->name('references');
+Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::post('/sendmessage', [HomeController::class, 'sendmessage'])->name('sendmessage');
+Route::get('/product/{id}/{slug}', [HomeController::class, 'product'])->name('product');
+Route::get('/categoryproducts/{id}/{slug}', [HomeController::class, 'categoryproducts'])->name('categoryproducts');
+Route::post('/getproduct', [HomeController::class, 'getproduct'])->name('getproduct');
+Route::get('/productlist/{search}', [HomeController::class, 'productlist'])->name('productlist');
+
 
 Route::get('/',function (){
     return view('home.index');
@@ -29,7 +39,10 @@ Route::get('/',function (){
 
 //Admin
 Route::middleware('auth')->prefix('admin')->group(function (){ //prefix ile ön ad ekleme,gruplama
-    Route::get('/',[\App\Http\Controllers\Admin\HomeController::class, 'index'])->name('admin_home');
+    Route::get('/',[\App\Http\Controllers\Admin\HomeController::class,'index'])->name('admin_home');
+
+    Route::get('/home', [HomeController::class, 'index'])->name('homepage');
+    Route::get('/categoryproducts/{id}/{slug}', [HomeController::class, 'categoryproducts'])->name('categoryproducts');
 
     #Category
     Route::get('category',[\App\Http\Controllers\Admin\CategoryController::class, 'index'])->name('admin_category');
@@ -68,7 +81,7 @@ Route::middleware('auth')->prefix('admin')->group(function (){ //prefix ile ön 
 
 Route::get('/admin/login', [HomeController::class, 'login'])->name('admin_login'); //sayfa çağırırken get
 Route::post('/admin/logincheck', [HomeController::class, 'logincheck'])->name('admin_logincheck');
-Route::get('/admin/logout', [HomeController::class, 'logout'])->name('logout');
+Route::get('/logout', [HomeController::class, 'logout'])->name('logout');
 
 Route::middleware([
     'auth:sanctum',

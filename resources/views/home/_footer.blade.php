@@ -1,3 +1,6 @@
+@php
+    $setting=\App\Http\Controllers\HomeController::getsetting()
+@endphp
 <!-- FOOTER -->
 <footer id="footer" class="section section-grey">
     <!-- container -->
@@ -9,21 +12,23 @@
                 <div class="footer">
                     <!-- footer logo -->
                     <div class="footer-logo">
-                        <a class="logo" href="#">
+                        <a class="logo" href="{{route('home')}}">
                             <img src="{{ asset('assets')}}/img/logo.png" alt="">
                         </a>
                     </div>
                     <!-- /footer logo -->
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+                    <h4>Adres</h4>
+                    <strong>Şirket</strong>{{$setting->company}}<br>
+                    <strong>Adres</strong>{{$setting->address}}<br>
+                    <strong>Telefon</strong>{{$setting->phone}}<br>
+                    <strong>Fax</strong>{{$setting->fax}}<br>
+                    <strong>Email</strong>{{$setting->email}}<br>
 
                     <!-- footer social -->
                     <ul class="footer-social">
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
                     </ul>
                     <!-- /footer social -->
                 </div>
@@ -39,7 +44,7 @@
                         <li><a href="#">My Wishlist</a></li>
                         <li><a href="#">Compare</a></li>
                         <li><a href="#">Checkout</a></li>
-                        <li><a href="#">Login</a></li>
+                        <li><a href="{{route('admin_login')}}">Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -52,7 +57,7 @@
                 <div class="footer">
                     <h3 class="footer-header">Customer Service</h3>
                     <ul class="list-links">
-                        <li><a href="#">About Us</a></li>
+                        <li><a href="{{route('aboutus')}}">About Us</a></li>
                         <li><a href="#">Shiping & Return</a></li>
                         <li><a href="#">Shiping Guide</a></li>
                         <li><a href="#">FAQ</a></li>
