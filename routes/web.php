@@ -73,7 +73,15 @@ Route::middleware('auth')->prefix('admin')->group(function (){ //prefix ile ön 
     #Setting
     Route::get('setting',[\App\Http\Controllers\Admin\SettingController::class, 'index'])->name('admin_setting');
     Route::post('setting/update',[\App\Http\Controllers\Admin\SettingController::class, 'update'])->name('admin_setting_update');
+});
 
+Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(function (){
+    Route::get('/',[\App\Http\Controllers\UserController::class,'index'])->name('myprofile');
+
+});
+
+Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
+    Route::get('/profile',[\App\Http\Controllers\UserController::class,'index'])->name('userprofile');
 
 });
 

@@ -60,7 +60,7 @@
                             @endguest
 
                         <ul class="custom-menu">
-                            <li><a href="#"><i class="fa fa-user-o"></i> Hesabım</a></li>
+                            <li><a href="{{route('myprofile')}}"><i class="fa fa-user-o"></i> Hesabım</a></li>
                             <li><a href="#"><i class="fa fa-heart-o"></i> Favoriler</a></li>
                             <li><a href="#"><i class="fa fa-exchange"></i> Compare</a></li>
                             <li><a href="#"><i class="fa fa-check"></i> Ödeme</a></li>
