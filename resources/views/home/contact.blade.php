@@ -28,7 +28,33 @@
             </div>
             <div class="col-md-6">
                 <h3 class="aside-title">İletişim Formu</h3>
-                İletişim Formu
+
+                <form id="checkout-form" class="clearfix" action="{{route('sendmessage')}}" method="post">
+                    @csrf
+                    <div class="billing-details">
+                        @include('home.message')
+                        <div class="form-group">
+                            <input class="input" type="text" name="name" placeholder="İsim & Soyisim">
+                        </div>
+                        <div class="form-group">
+                            <input class="input" type="text" name="phone" placeholder="Telefon No">
+                        </div>
+                        <div class="form-group">
+                            <input class="input" type="email" name="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input class="input" type="text" name="subject" placeholder="Konu">
+                        </div>
+                        <div class="form-group">
+                                    <textarea class="input" name="message" rows="5" placeholder="Mesajınız">
+                                    </textarea>
+                        </div>
+                        <div class="pull-right">
+                            <button type="submit" class="primary-btn">Send Message</button>
+                        </div>
+                    </div>
+
+                </form>
             </div>
         </div>
         <!-- /row -->
