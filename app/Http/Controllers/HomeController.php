@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Image;
 use App\Models\Message;
+use App\Models\Product;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+
 
 class HomeController extends Controller
 {
@@ -19,7 +22,24 @@ class HomeController extends Controller
 
     public function index(){
         $setting=Setting::first();
-        return view('home.index',['setting '=> $setting,'page' => 'home']);
+        $slider=Product::select('title','image','price')->limit(4)->get();
+        return view('home.index',
+            [
+                'setting' =>$setting,
+                'slider'=>$slider,
+                'page'=>'home']);
+    }
+    public function product($id,$slug){
+        $data = Product::find($id);
+        $datalist = Image::where('product_id',$id)->get();
+        #print_r($data);
+        #exit();
+        return view('home.product_detail',['data'=>$data,'datalist'=>$datalist]);
+    }
+    public function categoryproducts($id,$slug){
+        $datalist = Product::where('category_id',$id)->get();
+        $data = Category::find($id);
+        return view('home.category_products',['data'=>$data,'datalist'=>$datalist]);
     }
     public function aboutus(){
         $setting = Setting::first();

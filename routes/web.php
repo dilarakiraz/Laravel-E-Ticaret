@@ -2,6 +2,15 @@
 
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\FaqController;
+use App\Http\Controllers\Admin\MesssageController;
+use App\Http\Controllers\Admin\ReviewController;
+use App\Http\Controllers\ImageController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\Admin\OrderController as AdminOderController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ShopcartController;
+use App\Http\Controllers\Admin\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,13 +23,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home2', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('homepage');
+
+
 Route::redirect('/anasayfa','/home')->name('anasayfa');
 
-//Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
 Route::get('/references', [HomeController::class, 'references'])->name('references');

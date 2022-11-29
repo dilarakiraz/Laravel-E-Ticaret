@@ -1,11 +1,6 @@
 @extends('layouts.home')
 
-@section('title', 'Kitap Kurdu')
-@section('description')
-    Türkiye'nin en güvenilir e-ticaret sitesi
-@endsection
-@section('keywords','Bilgisayar,Telefon,Tablet,Buzdolabı,Televizyon,Beyaz Eşya')
-
+@section('title', $setting->title)
 
 @section('content')
 
