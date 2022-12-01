@@ -9,21 +9,20 @@
                 @php
                     $i=0;
                 @endphp
-                @foreach($slider as $rs)
+
                     @php
                         $i+= 1;
                     @endphp
                 <!-- banner -->
                 <div class="banner banner-1 @if($i==1)active @endif  ">
-                    <img src="{{ Storage::url($rs->image) }}" style="height:500px" alt="">
+                    <img src="" style="height:500px" alt="">
                     <div class="banner-caption text-center">
-                        <h3>{{$rs->title}}</h3>
-                        <h3 class="white-color font-weak">{{$rs->price}}</h3>
-                        <a href="{{route('product',['id'=>$rs->id,'slug'=>$rs->slug])}}" class="primary-btn">Şimdi Al</a>
+                        <h3></h3>
+                        <h3 class="white-color font-weak"></h3>
+                        <a href="" class="primary-btn">Şimdi Al</a>
                     </div>
                 </div>
                 <!-- /banner -->
-                @endforeach
 
             </div>
             <!-- /home slick -->

@@ -178,7 +178,7 @@
                                                 <span class="sale">-20%</span>
                                             </div>
                                             <a href="{{route('product',['id' => $rs->id,'slug' => $rs->slug ])}}" class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</a>
-                                            <img src="{{ Storage::url($rs->image)}}" style="height: 200px" alt="">
+                                            <img src="{{ Storage::url($rs->image)}}" style="height: 275px" alt="">
                                         </div>
                                         <div class="product-body">
                                             <h3 class="product-price">{{$rs->price}} <del class="product-old-price">{{$rs->price}}</del></h3>

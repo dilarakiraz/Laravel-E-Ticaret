@@ -19,25 +19,50 @@ class HomeController extends Controller
     public static function getsetting(){
         return Setting::first();
     }
+    public static function countreview($id)
+    {
+        return Review::where('product_id',  $id)->count();
+    }
+    public static function avrgreview($id)
+    {
+        return Review::where('product_id',  $id)->average('rate');
+    }
 
     public function index(){
         $setting=Setting::first();
         $slider=Product::select('title','image','price')->limit(4)->get();
+        $daily =   Product::select('id','title','image','price','slug')->limit(6)->inRandomOrder()->get();
+        $last =   Product::select('id','title','image','price','slug')->limit(4)->orderByDesc('id')->get();
+        $picked =   Product::select('id','title','image','price','slug')->limit(4)->inRandomOrder()->get();
+        #print_r($last);
+        #exit();
         return view('home.index',
             [
                 'setting' =>$setting,
                 'slider'=>$slider,
+                'daily'=>$daily,
+                'last'=>$last,
+                'picked'=>$picked,
                 'page'=>'home']);
     }
-    public function product($id,$slug){
+    public function product($id){
         $data = Product::find($id);
         $datalist = Image::where('product_id',$id)->get();
         #print_r($data);
         #exit();
         return view('home.product_detail',['data'=>$data,'datalist'=>$datalist]);
     }
+    public function addtocart($id)
+    {
+        echo "Add to Cart <br>";
+        $data = Product::find($id);
+        print_r($data);
+        exit();
+    }
     public function categoryproducts($id,$slug){
         $datalist = Product::where('category_id',$id)->get();
+        #print_r($datalist);
+        #exit();
         $data = Category::find($id);
         return view('home.category_products',['data'=>$data,'datalist'=>$datalist]);
     }
