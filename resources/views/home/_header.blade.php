@@ -3,8 +3,8 @@
     <!-- top Header -->
     <div id="top-header">
         <div class="container  text-center">
-            <p style="padding:5px;font-size:16px;background:#ff851b;">
-                120 TL ve Üzeri Tüm Alışverişlerinizde KARGO BEDAVA! Üstelik Kapıda Ödeme Seçeneğiyle.
+            <p style="padding:5px;font-size:20px;background:#ff851b;">
+                TÜRKİYE'NİN EN BÜYÜK KİTAP SATIŞ SİTESİ!
             </p>
         </div>
     </div>

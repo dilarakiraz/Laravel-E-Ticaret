@@ -31,7 +31,6 @@
                         <img src="{{ asset('assets')}}/img/banner14.jpg" alt="">
                         <div class="banner-caption">
                             <h2 class="white-color">YENİ<br>KOLEKSİYON</h2>
-                            <button class="primary-btn">İNCELE</button>
                         </div>
                     </div>
                 </div>
@@ -55,7 +54,7 @@
                                             <li><span>00 S</span></li>
                                         </ul>
                                         <a href="{{route('product',['id' => $rs->id,'slug' => $rs->slug ])}}" class="main-btn quick-view"><i class="fa fa-search-plus"></i> İNCELE</a>
-                                        <img src="{{ Storage::url($rs->image)}}" style="height: 350px " width="50px"  alt="">
+                                        <img src="{{ Storage::url($rs->image)}}" style="height: 320px " width="50px"  alt="">
                                     </div>
                                     <div class="product-body">
                                         <h3 class="product-price">{{$rs->price }} <del class="product-old-price">{{$rs->price * 1.2}}</del></h3>
@@ -99,7 +98,7 @@
                             <div class="col-md-3 col-sm-6 col-xs-6">
                                 <div class="product product-single">
                                     <div class="product-thumb">
-                                        <a href="{{route('product',['id' => $rs->id,'slug' => $rs->slug ])}}" class="main-btn quick-view"><i class="fa fa-search-plus"></i> İNCELE</a>
+                                        <a href="{{route('product',['id' => $rs->id,'slug' => $rs->slug ])}}" class="main-btn quick-view" ><i class="fa fa-search-plus"></i> İNCELE</a>
                                         <img src="{{ Storage::url($rs->image)}}" style="height: 250px"alt="">
                                     </div>
                                     <div class="product-body">
