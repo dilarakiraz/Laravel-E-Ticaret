@@ -1,4 +1,3 @@
-
 <!-- HEADER -->
 <header>
     <!-- top Header -->
@@ -10,7 +9,6 @@
         </div>
     </div>
     <!-- /top Header -->
-
     <!-- header -->
     <div id="header">
         <div class="container">
@@ -25,22 +23,20 @@
                             <img src="{{asset('assets')}}/img/logotext.png"  title="kitapla buluşmanın en kolay yolu!" alt="kitapkurdu.com" width="150" height="50">
                         </a>
                     </div>
-
                 </div>
                 <!-- /Logo -->
+
                 <!-- Search -->
                 <div class="header-search">
-                    <form>
-                        <input class="input search-input" type="text" placeholder="Kitap adı ara">
-                        <select class="input search-categories">
-                            <option value="0">Kategoriler</option>
-                            <option value="1">Category 01</option>
-                            <option value="1">Category 02</option>
-                        </select>
-                        <button class="search-btn"><i class="fa fa-search"></i></button>
+                    <form action="{{route('getproduct')}}" method="post">
+                        @csrf
+                        @livewire('search')
+                        <button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
                     </form>
+                    @livewireScripts
                 </div>
                 <!-- /Search -->
+
             </div>
             <div class="pull-right">
                 <ul class="header-btns">
@@ -62,20 +58,18 @@
                         <ul class="custom-menu">
                             <li><a href="{{route('myprofile')}}"><i class="fa fa-user-o"></i> Hesabım</a></li>
                             <li><a href="#"><i class="fa fa-heart-o"></i> Favoriler</a></li>
-                            <li><a href="#"><i class="fa fa-exchange"></i> Compare</a></li>
                             <li><a href="#"><i class="fa fa-check"></i> Ödeme</a></li>
                             <li><a href="{{route('logout')}}"><i class="fa fa-user-plus"></i> Çıkış</a></li>
                         </ul>
 
                     </li>
                     <!-- /Account -->
-
                     <!-- Cart -->
                     <li class="header-cart dropdown default-dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
                             <div class="header-btns-icon">
                                 <i class="fa fa-shopping-cart"></i>
-                                <span class="qty">3</span>
+                                <span class="qty">5</span>
                             </div>
                             <strong class="text-uppercase">Sepetim</strong>
                             <br>
@@ -106,14 +100,13 @@
                                     </div>
                                 </div>
                                 <div class="shopping-cart-btns">
-                                    <button class="main-btn">View Cart</button>
-                                    <button class="primary-btn">Checkout <i class="fa fa-arrow-circle-right"></i></button>
+                                    <button class="main-btn">Kartlarım</button>
+                                    <button class="primary-btn">ÖDEME <i class="fa fa-arrow-circle-right"></i></button>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <!-- /Cart -->
-
                     <!-- Mobile nav toggle-->
                     <li class="nav-toggle">
                         <button class="nav-toggle-btn main-btn icon-btn"><i class="fa fa-bars"></i></button>

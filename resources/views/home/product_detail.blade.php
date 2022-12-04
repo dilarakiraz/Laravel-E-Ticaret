@@ -30,24 +30,24 @@
                     <div class="col-md-6">
                         <div id="product-main-view">
                             <div class="product-view">
-                                <img src="{{ Storage::url($data->image)}}" style="height: 300px" alt="">
+                                <img src="{{ Storage::url($data->image)}}" style="height: 250px"  alt="">
                             </div>
 
                             @foreach($datalist as $rs)
 
                                 <div class="product-view">
-                                    <img src="{{ Storage::url($rs->image)}}" style="height: 300px" alt="">
+                                    <img src="{{ Storage::url($rs->image)}}" style="height: 50px" alt="">
                                 </div>
                             @endforeach
 
                         </div>
                         <div id="product-view">
                             <div class="product-view">
-                                <img src="{{ Storage::url($data->image)}}" style="height: 75px" alt="">
+                                <img src="{{ Storage::url($data->image)}}" style="height: 50px" alt="">
                             </div>
                             @foreach($datalist as $rs)
                                 <div class="product-view">
-                                    <img src="{{ Storage::url($rs->image)}}" style="height: 75px" alt="">
+                                    <img src="{{ Storage::url($rs->image)}}" style="height: 50px" alt="">
                                 </div>
                             @endforeach
                         </div>
@@ -55,33 +55,28 @@
                     <div class="col-md-6">
                         <div class="product-body">
                             <div class="product-label">
-                                <span>New</span>
+                                <span>Yeni</span>
                                 <span class="sale">-20%</span>
                             </div>
                             <h2 class="product-name">{{$data->title}}</h2>
                             <h3 class="product-price">{{$data->price }} <del class="product-old-price">{{$data->price * 1.2}}</del></h3>
 
-                            <p><strong>Availability:</strong> In Stock</p>
-                            <p><strong>Brand:</strong> E-SHOP</p>
+                            <p><strong>Durum:</strong>Stokta</p>
                             <p>{{$data->descripton}}</p>
                             <div class="product-options">
-                                <ul class="size-option">
-                                    <li><span class="text-uppercase">Size:</span></li>
-                                    <li class="active"><a href="#">S</a></li>
-                                    <li><a href="#">XL</a></li>
-                                    <li><a href="#">SL</a></li>
-                                </ul>
-                                <ul class="color-option">
-                                    <li><span class="text-uppercase">Color:</span></li>
-                                    <li class="active"><a href="#" style="background-color:#475984;"></a></li>
-                                    <li><a href="#" style="background-color:#8A2454;"></a></li>
-                                    <li><a href="#" style="background-color:#BF6989;"></a></li>
-                                    <li><a href="#" style="background-color:#9A54D8;"></a></li>
-                                </ul>
+
+
                             </div>
 
                             <div class="product-btns">
-
+                                <form action="" method="post">
+                                    @csrf
+                                    <div class="qty-input">
+                                        <span class="text-uppercase">QTY: </span>
+                                        <input class="input" name="quantity" type="number" value="1" max="{{$data->quantity}}">
+                                    </div>
+                                    <button type="submit"  class="primary-btn add-to-cart" ><i class="fa fa-shopping-cart"></i> Sepete Ekle</button>
+                                </form>
                                 <div class="pull-right">
                                     <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
                                     <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
@@ -93,8 +88,9 @@
                     <div class="col-md-12">
                         <div class="product-tab">
                             <ul class="tab-nav">
-                                <li class="active"><a data-toggle="tab" href="#tab1">Description</a></li>
-                                <li><a data-toggle="tab" href="#tab1">Details</a></li>
+                                <li class="active"><a data-toggle="tab" href="#tab1">Tanım</a></li>
+                                <li><a data-toggle="tab" href="#tab1">Detay</a></li>
+                                <li><a data-toggle="tab" href="#tab2">Yorumlar </a></li>
                             </ul>
                             <div class="tab-content">
                                 <div id="tab1" class="tab-pane fade in active">
@@ -107,11 +103,6 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="product-reviews">
-
-
-
-
-
                                                 <ul class="reviews-pages">
                                                     <li class="active">1</li>
                                                     <li><a href="#">2</a></li>
@@ -120,7 +111,6 @@
                                                 </ul>
                                             </div>
                                         </div>
-
                                     </div>
 
 

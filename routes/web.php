@@ -30,25 +30,19 @@ Route::get('/welcome', function () {
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('homepage');
 
-
-Route::redirect('/anasayfa','/home')->name('anasayfa');
-
-Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
 Route::get('/references', [HomeController::class, 'references'])->name('references');
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::post('/sendmessage', [HomeController::class, 'sendmessage'])->name('sendmessage');
-Route::get('/product/{id}/}', [HomeController::class, 'product'])->name('product');
+Route::get('/product', [HomeController::class, 'product'])->name('product');
 Route::get('/categoryproducts/{id}/{slug}', [HomeController::class, 'categoryproducts'])->name('categoryproducts');
 Route::post('/getproduct', [HomeController::class, 'getproduct'])->name('getproduct');
 Route::get('/productlist/{search}', [HomeController::class, 'productlist'])->name('productlist');
 Route::get('/addtocart/{id}/}', [HomeController::class, 'addtocart'])->name('addtocart');
 
 
-Route::get('/',function (){
-    return view('home.index');
-});
+
 
 //Admin
 Route::middleware('auth')->prefix('admin')->group(function (){ //prefix ile ön ad ekleme,gruplama
@@ -104,6 +98,15 @@ Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(fu
 
 Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
     Route::get('/profile',[\App\Http\Controllers\UserController::class,'index'])->name('userprofile');
+
+    #ShopCart
+    Route::prefix('shopcart')->group(function () {
+        // Route assigned name "admin.users"...
+        Route::get('/', [ShopcartController::class, 'index'])->name('user_shopcart');
+        Route::post('store/{id}', [ShopcartController::class, 'store'])->name('user_shopcart_add');
+        Route::post('update/{id}', [ShopcartController::class, 'update'])->name('user_shopcart_update');
+        Route::get('delete/{id}', [ShopcartController::class, 'destroy'])->name('user_shopcart_delete');
+    });
 
 });
 

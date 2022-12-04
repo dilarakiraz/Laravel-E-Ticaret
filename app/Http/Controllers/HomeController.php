@@ -19,14 +19,7 @@ class HomeController extends Controller
     public static function getsetting(){
         return Setting::first();
     }
-    public static function countreview($id)
-    {
-        return Review::where('product_id',  $id)->count();
-    }
-    public static function avrgreview($id)
-    {
-        return Review::where('product_id',  $id)->average('rate');
-    }
+
 
     public function index(){
         $setting=Setting::first();
@@ -34,7 +27,7 @@ class HomeController extends Controller
         $daily =   Product::select('id','title','image','price','slug')->limit(6)->inRandomOrder()->get();
         $last =   Product::select('id','title','image','price','slug')->limit(4)->orderByDesc('id')->get();
         $picked =   Product::select('id','title','image','price','slug')->limit(4)->inRandomOrder()->get();
-        #print_r($last);
+        #print_r($slider);
         #exit();
         return view('home.index',
             [
@@ -52,6 +45,23 @@ class HomeController extends Controller
         #exit();
         return view('home.product_detail',['data'=>$data,'datalist'=>$datalist]);
     }
+    public function getproduct(Request $request){
+        $search=$request->input('search');
+        $count=Product::where('title','like','%'.$search.'%')->get()->count();
+
+        if($count==1){
+            $data=Product::where('title','like','%'.$search.'%')->first();
+            return redirect()->route('product',['id'=>$data->id,'slug'=>$data->slug]);
+        }
+        else{
+            return redirect()->route('productlist',['search'=>$search]);
+        }
+    }
+    public function productlist($search){
+        $datalist=Product::where('title','like','%'.$search.'%')->get();
+        return view('home.search_products',['search'=>$search,'datalist'=>$datalist]);
+    }
+
     public function addtocart($id)
     {
         echo "Add to Cart <br>";

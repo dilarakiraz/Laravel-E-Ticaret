@@ -4,13 +4,9 @@
 @section('description'){{ $setting->description }} @endsection
 @section('keywords',$setting->keywords)
 
-
-
 @section('content')
 
     @include('home._slider')
-
-
 
     <!-- section -->
     <div class="section">
@@ -21,7 +17,7 @@
                 <!-- section-title -->
                 <div class="col-md-12">
                     <div class="section-title">
-                        <h2 class="title">Deals Of The Day</h2>
+                        <h2 class="title">Günün Kitapları</h2>
                         <div class="pull-right">
                             <div class="product-slick-dots-1 custom-dots"></div>
                         </div>
@@ -34,8 +30,8 @@
                     <div class="banner banner-2">
                         <img src="{{ asset('assets')}}/img/banner14.jpg" alt="">
                         <div class="banner-caption">
-                            <h2 class="white-color">NEW<br>COLLECTION</h2>
-                            <button class="primary-btn">Shop Now</button>
+                            <h2 class="white-color">YENİ<br>KOLEKSİYON</h2>
+                            <button class="primary-btn">İNCELE</button>
                         </div>
                     </div>
                 </div>
@@ -58,33 +54,18 @@
                                             <li><span>00 M</span></li>
                                             <li><span>00 S</span></li>
                                         </ul>
-                                        <a href="{{route('product',['id' => $rs->id,'slug' => $rs->slug ])}}" class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</a>
-                                        <img src="{{ Storage::url($rs->image)}}" style="height: 250px"  alt="">
+                                        <a href="{{route('product',['id' => $rs->id,'slug' => $rs->slug ])}}" class="main-btn quick-view"><i class="fa fa-search-plus"></i> İNCELE</a>
+                                        <img src="{{ Storage::url($rs->image)}}" style="height: 350px " width="50px"  alt="">
                                     </div>
                                     <div class="product-body">
                                         <h3 class="product-price">{{$rs->price }} <del class="product-old-price">{{$rs->price * 1.2}}</del></h3>
-                                        @php
-                                            $avgrev = \App\Http\Controllers\HomeController::avrgreview($rs->id);
-                                            $countreview = \App\Http\Controllers\HomeController::countreview($rs->id);
-                                        @endphp
-                                        <div class="product-rating">
-                                            <i class="fa fa-star @if ($avgrev<1) -o empty @endif"></i>
-                                            <i class="fa fa-star @if ($avgrev<2) -o empty @endif"></i>
-                                            <i class="fa fa-star @if ($avgrev<3) -o empty @endif"></i>
-                                            <i class="fa fa-star @if ($avgrev<4) -o empty @endif"></i>
-                                            <i class="fa fa-star @if ($avgrev<5) -o empty @endif"></i>
-                                            <i>({{$countreview}})</i>
-                                        </div>
+
 
                                         <h2 class="product-name"><a href="#">{{$rs->title}}</a></h2>
                                         <div class="product-btns">
                                             <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
                                             <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-                                            <form action="{{route('user_shopcart_add',['id' => $rs->id])}}" method="post">
-                                                @csrf
-                                                <input name="quantity" type="hidden" value="1">
-                                                <button type="submit"  class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
-                                            </form>
+
                                         </div>
                                     </div>
                                 </div>
@@ -109,7 +90,7 @@
                         <!-- section title -->
                         <div class="col-md-12">
                             <div class="section-title">
-                                <h2 class="title">Latest Products</h2>
+                                <h2 class="title">YENİ KİTAPLAR</h2>
                             </div>
                         </div>
                         <!-- section title -->
@@ -118,33 +99,19 @@
                             <div class="col-md-3 col-sm-6 col-xs-6">
                                 <div class="product product-single">
                                     <div class="product-thumb">
-                                        <a href="{{route('product',['id' => $rs->id,'slug' => $rs->slug ])}}" class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</a>
+                                        <a href="{{route('product',['id' => $rs->id,'slug' => $rs->slug ])}}" class="main-btn quick-view"><i class="fa fa-search-plus"></i> İNCELE</a>
                                         <img src="{{ Storage::url($rs->image)}}" style="height: 250px"alt="">
                                     </div>
                                     <div class="product-body">
                                         <h3 class="product-price">{{$rs->price }} </h3>
-                                        @php
-                                            $avgrev = \App\Http\Controllers\HomeController::avrgreview($rs->id);
-                                            $countreview = \App\Http\Controllers\HomeController::countreview($rs->id);
-                                        @endphp
-                                        <div class="product-rating">
-                                            <i class="fa fa-star @if ($avgrev<1) -o empty @endif"></i>
-                                            <i class="fa fa-star @if ($avgrev<2) -o empty @endif"></i>
-                                            <i class="fa fa-star @if ($avgrev<3) -o empty @endif"></i>
-                                            <i class="fa fa-star @if ($avgrev<4) -o empty @endif"></i>
-                                            <i class="fa fa-star @if ($avgrev<5) -o empty @endif"></i>
-                                            <i>({{$countreview}})</i>
-                                        </div>
+
+
 
                                         <h2 class="product-name"><a href="#">{{$rs->title}}</a></h2>
                                         <div class="product-btns">
                                             <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
                                             <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-                                            <form action="{{route('user_shopcart_add',['id' => $rs->id])}}" method="post">
-                                                @csrf
-                                                <input name="quantity" type="hidden" value="1">
-                                                <button type="submit"  class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
-                                            </form>
+
                                         </div>
                                     </div>
                                 </div>
@@ -164,7 +131,7 @@
                         <!-- section title -->
                         <div class="col-md-12">
                             <div class="section-title">
-                                <h2 class="title">Picked For You</h2>
+                                <h2 class="title">ÖNERİLENLER</h2>
                             </div>
                         </div>
                         <!-- section title -->
@@ -173,33 +140,18 @@
                             <div class="col-md-3 col-sm-6 col-xs-6">
                                 <div class="product product-single">
                                     <div class="product-thumb">
-                                        <a href="{{route('product',['id' => $rs->id,'slug' => $rs->slug ])}}" class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</a>
+                                        <a href="{{route('product',['id' => $rs->id,'slug' => $rs->slug ])}}" class="main-btn quick-view"><i class="fa fa-search-plus"></i> İNCELE</a>
                                         <img src="{{ Storage::url($rs->image)}}" style="height: 250px" alt="">
                                     </div>
                                     <div class="product-body">
                                         <h3 class="product-price">{{$rs->price }} </h3>
-                                        @php
-                                            $avgrev = \App\Http\Controllers\HomeController::avrgreview($rs->id);
-                                            $countreview = \App\Http\Controllers\HomeController::countreview($rs->id);
-                                        @endphp
-                                        <div class="product-rating">
-                                            <i class="fa fa-star @if ($avgrev<1) -o empty @endif"></i>
-                                            <i class="fa fa-star @if ($avgrev<2) -o empty @endif"></i>
-                                            <i class="fa fa-star @if ($avgrev<3) -o empty @endif"></i>
-                                            <i class="fa fa-star @if ($avgrev<4) -o empty @endif"></i>
-                                            <i class="fa fa-star @if ($avgrev<5) -o empty @endif"></i>
-                                            <i>({{$countreview}})</i>
-                                        </div>
+
 
                                         <h2 class="product-name"><a href="#">{{$rs->title}}</a></h2>
                                         <div class="product-btns">
                                             <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
                                             <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-                                            <form action="{{route('user_shopcart_add',['id' => $rs->id])}}" method="post">
-                                                @csrf
-                                                <input name="quantity" type="hidden" value="1">
-                                                <button type="submit"  class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
-                                            </form>
+
                                         </div>
                                     </div>
                                 </div>
