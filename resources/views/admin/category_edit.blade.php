@@ -3,45 +3,31 @@
 @section('title', 'Edit Category')
 
 @section('content')
-    <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
         <section class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h3>Edit Category</h3>
+                        <h3>Kategori Düzenleme</h3>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Edit Category</li>
+                            <li class="breadcrumb-item"><a href="#">Ana Sayfa</a></li>
+                            <li class="breadcrumb-item active">Kategori Düzenle</li>
                         </ol>
                     </div>
                 </div>
-            </div><!-- /.container-fluid -->
+            </div>
         </section>
 
-        <!-- Main content -->
         <section class="content">
-
-            <!-- Default box -->
             <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Add Category</h3>
-
-                </div>
                 <div class="card-body">
-
-
-                    <!-- form start -->
                     <form role="form" action="{{route('admin_category_update',['id'=>$data->id])}}" method="post">
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
                                 <label >Parent</label>
-
-
                                 <select class="form-control select2" name="parent_id" style="width: 100%;">
                                     <option value="0" selected="selected">Main Category</option>
                                     @foreach($datalist as $rs)
@@ -50,9 +36,7 @@
                                         </option>
                                     @endforeach
                                 </select>
-
                             </div>
-
                             <div class="form-group">
                                 <label >Title</label>
                                 <input type="text" id="title" name="title"  value="{{$data->title}}" class="form-control"   >
@@ -77,26 +61,11 @@
                                     <option>True</option>
                                 </select>
                             </div>
-
                         </div>
-                        <!-- /.card-body -->
-
                         <div class="card-footer">
-                            <button type="submit" class="btn btn-primary">Update Category</button>
+                            <button type="submit" class="btn btn-primary">Kategori Güncelle</button>
                         </div>
                     </form>
-
-
-                    <!-- /.card-body -->
-                    <div class="card-footer">
-                        ..
-                    </div>
-                    <!-- /.card-footer-->
                 </div>
-                <!-- /.card -->
-
-        <!-- /.content -->
     </div>
-    <!-- /.content-wrapper -->
-
 @endsection

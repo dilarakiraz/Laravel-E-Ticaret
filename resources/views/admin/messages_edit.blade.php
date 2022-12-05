@@ -19,7 +19,7 @@
     <!-- Default box -->
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Message Detail</h3>
+            <h3 class="card-title">Mesaj Detay</h3>
             @include('home.message')
         </div>
         <div class="card-body">
@@ -56,7 +56,7 @@
                         <td></td>
                         <td>
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Update Message</button>
+                                <button type="submit" class="btn btn-primary">Mesajı Güncelle</button>
                             </div>
                         </td>
                         </tr>

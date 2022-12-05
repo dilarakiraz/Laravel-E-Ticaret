@@ -9,8 +9,8 @@
 <div id="breadcrumb">
     <div class="container">
         <ul class="breadcrumb">
-            <li><a href="{{route('home')}}">Home</a></li>
-            <li class="active">Contact</li>
+            <li><a href="{{route('home')}}">Ana Sayfa</a></li>
+            <li class="active">İletişim</li>
         </ul>
     </div>
 </div>
@@ -50,7 +50,7 @@
                                     </textarea>
                         </div>
                         <div class="pull-right">
-                            <button type="submit" class="primary-btn">Send Message</button>
+                            <button type="submit" class="primary-btn">Mesaj Gönder</button>
                         </div>
                     </div>
 

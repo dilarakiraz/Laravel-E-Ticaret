@@ -57,7 +57,7 @@
                                         <img src="{{ Storage::url($rs->image)}}" style="height: 320px " width="50px"  alt="">
                                     </div>
                                     <div class="product-body">
-                                        <h3 class="product-price">{{$rs->price }} <del class="product-old-price">{{$rs->price * 1.2}}</del></h3>
+                                        <h3 class="product-price">{{$rs->price }}₺ <del class="product-old-price">{{$rs->price * 1.2}}</del></h3>
 
 
                                         <h2 class="product-name"><a href="#">{{$rs->title}}</a></h2>
@@ -102,7 +102,7 @@
                                         <img src="{{ Storage::url($rs->image)}}" style="height: 250px"alt="">
                                     </div>
                                     <div class="product-body">
-                                        <h3 class="product-price">{{$rs->price }} </h3>
+                                        <h3 class="product-price">{{$rs->price }}₺ </h3>
 
 
 
@@ -143,14 +143,11 @@
                                         <img src="{{ Storage::url($rs->image)}}" style="height: 250px" alt="">
                                     </div>
                                     <div class="product-body">
-                                        <h3 class="product-price">{{$rs->price }} </h3>
-
+                                        <h3 class="product-price">{{$rs->price }}₺</h3>
 
                                         <h2 class="product-name"><a href="#">{{$rs->title}}</a></h2>
                                         <div class="product-btns">
                                             <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-                                            <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-
                                         </div>
                                     </div>
                                 </div>

@@ -9,8 +9,8 @@
 <div id="breadcrumb">
     <div class="container">
         <ul class="breadcrumb">
-            <li><a href="{{route('home')}}">Home</a></li>
-            <li class="active">References</li>
+            <li><a href="{{route('home')}}">Ana Sayfa</a></li>
+            <li class="active">Referans</li>
         </ul>
     </div>
 </div>

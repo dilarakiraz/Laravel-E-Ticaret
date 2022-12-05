@@ -3,9 +3,7 @@
 @section('title', 'Add Category')
 
 @section('content')
-    <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
         <section class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
@@ -19,13 +17,11 @@
                         </ol>
                     </div>
                 </div>
-            </div><!-- /.container-fluid -->
+            </div>
         </section>
 
-        <!-- Main content -->
         <section class="content">
 
-            <!-- Default box -->
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">Add Category</h3>
@@ -33,7 +29,6 @@
                 </div>
                 <div class="card-body">
 
-                    <!-- form start -->
                     <form role="form" action="{{route('admin_category_create')}}" method="post">
                         @csrf
                         <div class="card-body">
@@ -72,27 +67,14 @@
                                     <option>True</option>
                                 </select>
                             </div>
-
                         </div>
-                        <!-- /.card-body -->
 
                         <div class="card-footer">
                             <button type="submit" class="btn btn-primary">Add Category</button>
                         </div>
                     </form>
                 </div>
-                <!-- /.card-body -->
-
-                <div class="card-footer">
-
-                </div>
-                <!-- /.card-footer-->
             </div>
-            <!-- /.card -->
-
         </section>
-        <!-- /.content -->
     </div>
-    <!-- /.content-wrapper -->
-
 @endsection

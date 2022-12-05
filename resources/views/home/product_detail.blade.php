@@ -41,16 +41,7 @@
                             @endforeach
 
                         </div>
-                        <div id="product-view">
-                            <div class="product-view">
-                                <img src="{{ Storage::url($data->image)}}" style="height: 50px" alt="">
-                            </div>
-                            @foreach($datalist as $rs)
-                                <div class="product-view">
-                                    <img src="{{ Storage::url($rs->image)}}" style="height: 50px" alt="">
-                                </div>
-                            @endforeach
-                        </div>
+
                     </div>
                     <div class="col-md-6">
                         <div class="product-body">
@@ -59,7 +50,7 @@
                                 <span class="sale">-20%</span>
                             </div>
                             <h2 class="product-name">{{$data->title}}</h2>
-                            <h3 class="product-price">{{$data->price }} <del class="product-old-price">{{$data->price * 1.2}}</del></h3>
+                            <h3 class="product-price">{{$data->price }}₺ <del class="product-old-price">{{$data->price * 1.2}}</del></h3>
 
                             <p><strong>Durum:</strong>Stokta</p>
                             <p>{{$data->descripton}}</p>
@@ -72,15 +63,13 @@
                                 <form action="" method="post">
                                     @csrf
                                     <div class="qty-input">
-                                        <span class="text-uppercase">QTY: </span>
+                                        <span class="text-uppercase">Adet: </span>
                                         <input class="input" name="quantity" type="number" value="1" max="{{$data->quantity}}">
                                     </div>
                                     <button type="submit"  class="primary-btn add-to-cart" ><i class="fa fa-shopping-cart"></i> Sepete Ekle</button>
                                 </form>
                                 <div class="pull-right">
                                     <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-                                    <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-                                    <button class="main-btn icon-btn"><i class="fa fa-share-alt"></i></button>
                                 </div>
                             </div>
                         </div>

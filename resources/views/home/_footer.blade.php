@@ -23,12 +23,6 @@
                     <strong>Telefon</strong>{{$setting->phone}}<br>
                     <strong>Fax</strong>{{$setting->fax}}<br>
                     <strong>Email</strong>{{$setting->email}}<br>
-                    <!-- footer social -->
-                    <ul class="footer-social">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    </ul>
-                    <!-- /footer social -->
                 </div>
             </div>
             <!-- /footer widget -->
@@ -37,7 +31,7 @@
                 <div class="footer">
                     <h3 class="footer-header">HESABIM</h3>
                     <ul class="list-links">
-                        <li><a href="#">Hesabım</a></li>
+                        <li><a href="">Hesabım</a></li>
                         <li><a href="#">İsteklerim</a></li>
                         <li><a href="#">Ödeme</a></li>
                         <li><a href="{{route('admin_login')}}">Giriş</a></li>

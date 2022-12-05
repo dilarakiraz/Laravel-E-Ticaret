@@ -23,7 +23,7 @@ class HomeController extends Controller
 
     public function index(){
         $setting=Setting::first();
-        $slider=Product::select('title','image','price')->limit(4)->get();
+        $slider=Product::select('id','title','image','price','slug')->limit(4)->get();
         $daily =   Product::select('id','title','image','price','slug')->limit(6)->inRandomOrder()->get();
         $last =   Product::select('id','title','image','price','slug')->limit(4)->orderByDesc('id')->get();
         $picked =   Product::select('id','title','image','price','slug')->limit(4)->inRandomOrder()->get();
@@ -85,7 +85,8 @@ class HomeController extends Controller
         return view('home.references',['setting'=> $setting]);
     }
     public function faq(){
-        return view('home.about');
+        $datalist = Faq::all()->sortBy('position');
+        return view('home.faq',['datalist'=>$datalist]);
     }
     public function contact(){
         $setting = Setting::first();

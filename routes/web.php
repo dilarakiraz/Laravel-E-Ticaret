@@ -35,12 +35,11 @@ Route::get('/references', [HomeController::class, 'references'])->name('referenc
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::post('/sendmessage', [HomeController::class, 'sendmessage'])->name('sendmessage');
-Route::get('/product', [HomeController::class, 'product'])->name('product');
 Route::get('/categoryproducts/{id}/{slug}', [HomeController::class, 'categoryproducts'])->name('categoryproducts');
 Route::post('/getproduct', [HomeController::class, 'getproduct'])->name('getproduct');
 Route::get('/productlist/{search}', [HomeController::class, 'productlist'])->name('productlist');
 Route::get('/addtocart/{id}/}', [HomeController::class, 'addtocart'])->name('addtocart');
-
+Route::get('/product/{id}/{slug}',[HomeController::class,'product'])->name('product');
 
 
 
