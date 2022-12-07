@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
+
     public static function categoryList(){
         return Category::where('parent_id', '=', 0)->with('children')->get();
     }
@@ -38,27 +39,35 @@ class HomeController extends Controller
                 'picked'=>$picked,
                 'page'=>'home']);
     }
-    public function product($id){
+
+    public function product($id,$slug){
         $data = Product::find($id);
         $datalist = Image::where('product_id',$id)->get();
         #print_r($data);
         #exit();
         return view('home.product_detail',['data'=>$data,'datalist'=>$datalist]);
     }
-    public function getproduct(Request $request){
-        $search=$request->input('search');
-        $count=Product::where('title','like','%'.$search.'%')->get()->count();
 
-        if($count==1){
-            $data=Product::where('title','like','%'.$search.'%')->first();
+    public function getproduct(Request $request)
+    {
+        $search=$request->input('search');
+
+        $count = Product::where('title', 'like', '%'.$search.'%')->get()->count();
+        if ($count==1)
+        {
+            $data = Product::where('title', 'like', '%'.$search.'%')->first();
             return redirect()->route('product',['id'=>$data->id,'slug'=>$data->slug]);
         }
-        else{
+        else
+        {
             return redirect()->route('productlist',['search'=>$search]);
         }
+
     }
-    public function productlist($search){
-        $datalist=Product::where('title','like','%'.$search.'%')->get();
+
+    public function productlist($search)
+    {
+        $datalist =Product::where('title', 'like', '%'.$search.'%')->get();
         return view('home.search_products',['search'=>$search,'datalist'=>$datalist]);
     }
 

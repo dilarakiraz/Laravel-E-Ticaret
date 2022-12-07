@@ -9,13 +9,7 @@
         <li><a href="{{route('faq')}}">FAQ</a></li>
         <li><a href="{{route('contact')}}">İLETİŞİM</a></li>
         <li><a href="#">Satış</a></li>
-        <li class="dropdown default-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Sayfalar <i class="fa fa-caret-down"></i></a>
-            <ul class="custom-menu">
-                <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="products.html">Ürünler</a></li>
-                <li><a href="product-page.html">Ürün Detayları</a></li>
-                <li><a href="checkout.html">Ödeme</a></li>
-            </ul>
+        <li><a href="#">Ödeme</a>
         </li>
     </ul>
 </div>

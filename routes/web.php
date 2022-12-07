@@ -38,7 +38,7 @@ Route::post('/sendmessage', [HomeController::class, 'sendmessage'])->name('sendm
 Route::get('/categoryproducts/{id}/{slug}', [HomeController::class, 'categoryproducts'])->name('categoryproducts');
 Route::post('/getproduct', [HomeController::class, 'getproduct'])->name('getproduct');
 Route::get('/productlist/{search}', [HomeController::class, 'productlist'])->name('productlist');
-Route::get('/addtocart/{id}/}', [HomeController::class, 'addtocart'])->name('addtocart');
+Route::get('/addtocart/{id}}', [HomeController::class, 'addtocart'])->name('addtocart');
 Route::get('/product/{id}/{slug}',[HomeController::class,'product'])->name('product');
 
 
