@@ -60,7 +60,7 @@
                             </div>
 
                             <div class="product-btns">
-                                <form action="" method="post">
+                                <form action="{{route('user_shopcart_add',['id' => $data->id])}}" method="post">
                                     @csrf
                                     <div class="qty-input">
                                         <span class="text-uppercase">Adet: </span>

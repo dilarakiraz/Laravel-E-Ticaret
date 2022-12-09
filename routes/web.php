@@ -38,7 +38,6 @@ Route::post('/sendmessage', [HomeController::class, 'sendmessage'])->name('sendm
 Route::get('/categoryproducts/{id}/{slug}', [HomeController::class, 'categoryproducts'])->name('categoryproducts');
 Route::post('/getproduct', [HomeController::class, 'getproduct'])->name('getproduct');
 Route::get('/productlist/{search}', [HomeController::class, 'productlist'])->name('productlist');
-Route::get('/addtocart/{id}}', [HomeController::class, 'addtocart'])->name('addtocart');
 Route::get('/product/{id}/{slug}',[HomeController::class,'product'])->name('product');
 
 
@@ -98,6 +97,9 @@ Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(fu
 Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
     Route::get('/profile',[\App\Http\Controllers\UserController::class,'index'])->name('userprofile');
 
+
+
+
     #ShopCart
     Route::prefix('shopcart')->group(function () {
         // Route assigned name "admin.users"...
@@ -106,6 +108,7 @@ Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
         Route::post('update/{id}', [ShopcartController::class, 'update'])->name('user_shopcart_update');
         Route::get('delete/{id}', [ShopcartController::class, 'destroy'])->name('user_shopcart_delete');
     });
+
 
 });
 
