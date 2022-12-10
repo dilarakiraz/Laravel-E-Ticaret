@@ -97,8 +97,17 @@ Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(fu
 Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
     Route::get('/profile',[\App\Http\Controllers\UserController::class,'index'])->name('userprofile');
 
-
-
+    #Product
+    Route::prefix('product')->group(function () {
+        // Route assigned name "admin.users"...
+        Route::get('/', [ProductController::class, 'index'])->name('user_products');
+        Route::get('create', [ProductController::class, 'create'])->name('user_product_add');
+        Route::post('store', [ProductController::class, 'store'])->name('user_product_store');
+        Route::get('edit/{id}', [ProductController::class, 'edit'])->name('user_product_edit');
+        Route::post('update/{id}', [ProductController::class, 'update'])->name('user_product_update');
+        Route::get('delete/{id}', [ProductController::class, 'destroy'])->name('user_product_delete');
+        Route::get('show', [ProductController::class, 'show'])->name('user_product_show');
+    });
 
     #ShopCart
     Route::prefix('shopcart')->group(function () {
