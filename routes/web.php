@@ -31,6 +31,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('homepage');
 
 Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
+Route::post('/listas', [HomeController::class, 'listas'])->name('listas');
 Route::get('/references', [HomeController::class, 'references'])->name('references');
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');

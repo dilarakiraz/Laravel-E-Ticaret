@@ -89,6 +89,10 @@ class HomeController extends Controller
         $setting = Setting::first();
         return view('home.about',['setting'=> $setting]);
     }
+    public function listas($search){
+        return $search;
+
+    }
     public function references(){
         $setting = Setting::first();
         return view('home.references',['setting'=> $setting]);

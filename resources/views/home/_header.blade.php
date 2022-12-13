@@ -30,10 +30,11 @@
                 <div class="header-search">
                     <form action="{{route('getproduct')}}" method="post">
                         @csrf
-                        @livewire('search')
+                        <input type="text" id="search" name="search" class="form-control" required="">
                         <button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
                     </form>
                     @livewireScripts
+
                 </div>
                 <!-- /Search -->
 
