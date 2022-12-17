@@ -9,7 +9,7 @@
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
                 @if (Auth::user()->profile_photo_path)
-                    <img src="{{ Storage::url(Auth::user()->profile_photo_path)}}" style="height: 40px" class="img-circle elevation-2" alt="User Image">
+                    <img src="{{ Storage::url(Auth::user()->profile_photo_path)}}" style="height: 30px" class="img-circle elevation-2" alt="User Image">
                 @endif
 
             </div>

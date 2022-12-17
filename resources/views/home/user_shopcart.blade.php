@@ -12,7 +12,6 @@
             </ul>
         </div>
     </div>
-    <!-- /BREADCRUMB -->
 
     <!-- section -->
     <div class="section">
@@ -25,8 +24,6 @@
                     @include('home.usermenu')
                 </div>
                 <!-- /ASIDE -->
-
-                <!-- Default box -->
                 <div class="card col-md-10">
 
                     <div class="card-body">
@@ -87,7 +84,7 @@
 
                             </tfoot>
                         </table>
-                        <form action="" method="post">
+                        <form action="{{route('user_order_add')}}" method="post">
                             @csrf
                             <input type="hidden" name="total" value="{{$total}}">
                             <div class="pull-right">
@@ -96,9 +93,6 @@
                         </form>
                     </div>
                     <!-- /.card-body -->
-
-
-
                 </div>
                 <!-- /row -->
             </div>
