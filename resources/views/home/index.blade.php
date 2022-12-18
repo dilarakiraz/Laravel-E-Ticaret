@@ -25,16 +25,6 @@
                 </div>
                 <!-- /section-title -->
 
-                <!-- banner -->
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <div class="banner banner-2">
-                        <img src="{{ asset('assets')}}/img/banner14.jpg" alt="">
-                        <div class="banner-caption">
-                            <h2 class="white-color">YENİ<br>KOLEKSİYON</h2>
-                        </div>
-                    </div>
-                </div>
-                <!-- /banner -->
 
                 <!-- Product Slick -->
                 <div class="col-md-9 col-sm-6 col-xs-6">
@@ -45,19 +35,11 @@
                                 <!-- Product Single -->
                                 <div class="product product-single">
                                     <div class="product-thumb">
-                                        <div class="product-label">
-                                            <span class="sale">-20%</span>
-                                        </div>
-                                        <ul class="product-countdown">
-                                            <li><span>00 H</span></li>
-                                            <li><span>00 M</span></li>
-                                            <li><span>00 S</span></li>
-                                        </ul>
                                         <a href="{{route('product',['id' => $rs->id,'slug' => $rs->slug ])}}" class="main-btn quick-view"><i class="fa fa-search-plus"></i> İNCELE</a>
                                         <img src="{{ Storage::url($rs->image)}}" style="height: 320px " width="50px"  alt="">
                                     </div>
                                     <div class="product-body">
-                                        <h3 class="product-price">{{$rs->price }}₺ <del class="product-old-price">{{$rs->price * 1.2}}</del></h3>
+                                        <h3 class="product-price">{{$rs->price }}₺ <del class="product-old-price">{{$rs->price * 1.2}}₺</del></h3>
 
 
                                         <h2 class="product-name"><a href="#">{{$rs->title}}</a></h2>

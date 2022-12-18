@@ -4,7 +4,6 @@
 @section('description'){{ $data->description }} @endsection
 @section('keywords',$data->keywords)
 
-
 @section('content')
 
     <div id="breadcrumb">
@@ -16,49 +15,30 @@
             </ul>
         </div>
     </div>
-    <!-- /BREADCRUMB -->
-
-    <!-- section -->
     <div class="section">
-        <!-- container -->
         <div class="container">
-            <!-- row -->
             <div class="row">
-
-                <!--  Product Details -->
                 <div class="product product-details clearfix">
                     <div class="col-md-6">
                         <div id="product-main-view">
                             <div class="product-view">
                                 <img src="{{ Storage::url($data->image)}}" style="height: 250px"  alt="">
                             </div>
-
                             @foreach($datalist as $rs)
-
                                 <div class="product-view">
                                     <img src="{{ Storage::url($rs->image)}}" style="height: 50px" alt="">
                                 </div>
                             @endforeach
-
                         </div>
-
                     </div>
                     <div class="col-md-6">
                         <div class="product-body">
-                            <div class="product-label">
-                                <span>Yeni</span>
-                                <span class="sale">-20%</span>
-                            </div>
                             <h2 class="product-name">{{$data->title}}</h2>
                             <h3 class="product-price">{{$data->price }}₺ <del class="product-old-price">{{$data->price * 1.2}}</del></h3>
-
                             <p><strong>Durum:</strong>Stokta</p>
                             <p>{{$data->descripton}}</p>
                             <div class="product-options">
-
-
                             </div>
-
                             <div class="product-btns">
                                 <form action="{{route('user_shopcart_add',['id' => $data->id])}}" method="post">
                                     @csrf
@@ -101,21 +81,12 @@
                                             </div>
                                         </div>
                                     </div>
-
-
-
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <!-- /Product Details -->
-
             </div>
-            <!-- /row -->
         </div>
-        <!-- /container -->
     </div>
-    <!-- /section -->
 @endsection
