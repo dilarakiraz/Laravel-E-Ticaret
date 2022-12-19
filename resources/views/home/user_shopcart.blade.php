@@ -84,7 +84,7 @@
 
                             </tfoot>
                         </table>
-                        <form action="{{route('user_order_add')}}" method="post">
+                        <form action="{{route('user_sales_add')}}" method="post">
                             @csrf
                             <input type="hidden" name="total" value="{{$total}}">
                             <div class="pull-right">

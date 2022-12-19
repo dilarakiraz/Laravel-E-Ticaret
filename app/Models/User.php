@@ -63,12 +63,12 @@ class User extends Authenticatable
     {
         return $this->hasMany(Shopcart::class);
     }
-    public function orderitem()
+    public function salesitem()
     {
-        return $this->hasMany(Orderitem::class);
+        return $this->hasMany(Salesitem::class);
     }
-    public function order()
+    public function sales()
     {
-        return $this->hasMany(Order::class);
+        return $this->hasMany(Sales::class);
     }
 }

@@ -4,7 +4,7 @@
     <ul class="list-links">
         <li><a href="{{route('myprofile')}}">Hesabım</a></li>
         <li><a href="{{route('user_shopcart')}}">Sepetim</a></li>
-        <li><a href="{{route('user_orders')}}">Siparişlerim</a></li>
+        <li><a href="{{route('user_sales')}}">Siparişlerim</a></li>
         <li><a href="#">Yorumlarım</a></li>
         <li><a href="{{route('user_products')}}">Ürünlerim</a></li>
         <li><a href="#">Mesajlarım</a></li>

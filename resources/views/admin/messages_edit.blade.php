@@ -65,9 +65,7 @@
                 <!-- /.card-body -->
             </form>
             <!-- /.card-body -->
-            <div class="card-footer">
-                ..
-            </div>
+
             <!-- /.card-footer-->
         </div>
         <!-- /.card -->

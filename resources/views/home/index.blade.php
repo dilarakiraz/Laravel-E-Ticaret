@@ -23,10 +23,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- /section-title -->
 
-
-                <!-- Product Slick -->
                 <div class="col-md-9 col-sm-6 col-xs-6">
                     <div class="row">
                         <div id="product-slick-1" class="product-slick">
@@ -40,12 +37,9 @@
                                     </div>
                                     <div class="product-body">
                                         <h3 class="product-price">{{$rs->price }}₺ <del class="product-old-price">{{$rs->price * 1.2}}₺</del></h3>
-
-
                                         <h2 class="product-name"><a href="#">{{$rs->title}}</a></h2>
                                         <div class="product-btns">
                                             <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-                                            <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
                                             <form action="{{route('user_shopcart_add',['id' => $rs->id])}}" method="post">
                                                 @csrf
                                                 <input name="quantity" type="hidden" value="1">
@@ -62,11 +56,7 @@
                 </div>
                 <!-- /Product Slick -->
             </div>
-            <!-- /row -->
 
-
-
-            <!-- section -->
             <div class="section">
                 <!-- container -->
                 <div class="container">
@@ -89,13 +79,9 @@
                                     </div>
                                     <div class="product-body">
                                         <h3 class="product-price">{{$rs->price }}₺ </h3>
-
-
-
                                         <h2 class="product-name"><a href="#">{{$rs->title}}</a></h2>
                                         <div class="product-btns">
                                             <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-                                            <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
                                             <form action="{{route('user_shopcart_add',['id' => $rs->id])}}" method="post">
                                                 @csrf
                                                 <input name="quantity" type="hidden" value="1">
@@ -106,15 +92,9 @@
                                 </div>
                             </div>
                             <!-- /Product Single -->
-
                         @endforeach
-
-
                     </div>
                     <!-- /row -->
-
-
-
                     <!-- row -->
                     <div class="row">
                         <!-- section title -->
@@ -134,7 +114,6 @@
                                     </div>
                                     <div class="product-body">
                                         <h3 class="product-price">{{$rs->price }}₺</h3>
-
                                         <h2 class="product-name"><a href="#">{{$rs->title}}</a></h2>
                                         <div class="product-btns">
                                             <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>

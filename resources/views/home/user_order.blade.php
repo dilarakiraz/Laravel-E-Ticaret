@@ -7,8 +7,8 @@
     <div id="breadcrumb">
         <div class="container">
             <ul class="breadcrumb">
-                <li><a href="{{route('home')}}">Home</a></li>
-                <li class="active">User Orders</li>
+                <li><a href="{{route('home')}}">Ana Sayfa</a></li>
+                <li class="active">Siparişlerim</li>
             </ul>
         </div>
     </div>
@@ -38,14 +38,13 @@
                                 <thead>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Name</th>
-                                    <th>Phone</th>
+                                    <th>İsim</th>
+                                    <th>Telefon</th>
                                     <th>Email</th>
-                                    <th>Address</th>
-                                    <th>total</th>
-                                    <th>Date</th>
-                                    <th>Status</th>
-                                    <th style="width: 5px" colspan="2"> Actions</th>
+                                    <th>Adres</th>
+                                    <th>Tutar</th>
+                                    <th>Tarih</th>
+                                    <th style="width: 5px" colspan="2"> Detay</th>
 
                                 </tr>
                                 </thead>
@@ -59,8 +58,7 @@
                                         <td>{{ $rs->address}}</td>
                                         <td>{{ $rs->total}}</td>
                                         <td>{{ $rs->created_at}}</td>
-                                        <td>{{ $rs->status}}</td>
-                                        <td><a href="{{route('user_order_show', ['id' => $rs->id])}}" >  <img src="{{asset('assets/admin/images')}}/edit.png" height="25"></a></td>
+                                        <td><a href="{{route('user_sales_show', ['id' => $rs->id])}}" >  <img src="{{asset('assets/admin/images')}}/edit.png" height="25"></a></td>
                                     </tr>
                                 @endforeach
                             </table>

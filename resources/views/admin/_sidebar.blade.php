@@ -2,21 +2,20 @@
     <a href="{{ route('admin_home') }}" class="brand-link">
         <img src="{{ asset('assets')}}/admin/dist/img/AdminLTELogo.png" alt="Admin Logo" class="brand-image img-circle elevation-3"
              style="opacity: .8">
-        <span class="brand-text font-weight-light">Admin</span>
     </a>
     <!-- Sidebar -->
     <div class="sidebar">
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
                 @if (Auth::user()->profile_photo_path)
-                    <img src="{{ Storage::url(Auth::user()->profile_photo_path)}}" style="height: 30px" class="img-circle elevation-2" alt="User Image">
+                    <img src="{{ Storage::url(Auth::user()->profile_photo_path)}}" style="height: 25px" class="img-circle elevation-2" alt="User Image">
                 @endif
 
             </div>
             <div class="info">
 
                 @auth()
-                <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+                <a href="#" class="d-block">ADI: {{ Auth::user()->name }}</a>
                 <a href="{{ route('logout') }}" class="d-block">ÇIKIŞ</a>
                 @endauth
 

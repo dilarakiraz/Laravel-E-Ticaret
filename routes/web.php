@@ -120,15 +120,15 @@ Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
     });
 
     #Order
-    Route::prefix('order')->group(function () {
+    Route::prefix('sales')->group(function () {
         // Route assigned name "admin.users"...
-        Route::get('/', [OrderController::class, 'index'])->name('user_orders');
-        Route::post('create', [OrderController::class, 'create'])->name('user_order_add');
-        Route::post('store', [OrderController::class, 'store'])->name('user_order_store');
-        Route::get('edit/{id}', [OrderController::class, 'edit'])->name('user_order_edit');
-        Route::post('update/{id}', [OrderController::class, 'update'])->name('user_order_update');
-        Route::get('delete/{id}', [OrderController::class, 'destroy'])->name('user_order_delete');
-        Route::get('show/{id}', [OrderController::class, 'show'])->name('user_order_show');
+        Route::get('/', [\App\Http\Controllers\SalesController::class, 'index'])->name('user_sales');
+        Route::post('create', [\App\Http\Controllers\SalesController::class, 'create'])->name('user_sales_add');
+        Route::post('store', [\App\Http\Controllers\SalesController::class, 'store'])->name('user_sales_store');
+        Route::get('edit/{id}', [\App\Http\Controllers\SalesController::class, 'edit'])->name('user_sales_edit');
+        Route::post('update/{id}', [\App\Http\Controllers\SalesController::class, 'update'])->name('user_sales_update');
+        Route::get('delete/{id}', [\App\Http\Controllers\SalesController::class, 'destroy'])->name('user_sales_delete');
+        Route::get('show/{id}', [\App\Http\Controllers\SalesController::class, 'show'])->name('user_sales_show');
     });
 
 
