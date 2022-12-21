@@ -5,11 +5,11 @@
                 <!-- Logo -->
                 <div class="header-logo">
                     <a class="logo" href="{{route('home')}}">
-                        <img src="{{ asset('assets')}}/img/logo.png" alt="kitapkurdu.com">
+                        <img src="{{ asset('assets')}}/img/logok.jpg" alt="kitapkurdu.com">
                     </a>
                     <div class="logo-text">
                         <a href="http://127.0.0.1:8000/">
-                            <img src="{{asset('assets')}}/img/logotext.png"  title="kitapla buluşmanın en kolay yolu!" alt="kitapkurdu.com" width="150" height="50">
+                            <img src="{{asset('assets')}}/img/logotext.jpg"  title="kitapla buluşmanın en kolay yolu!" alt="kitapkurdu.com" width="250" height="50">
                         </a>
                     </div>
                 </div>

@@ -78,6 +78,21 @@ Route::middleware('auth')->prefix('admin')->group(function (){ //prefix ile ön 
         Route::get('delete/{id}',[\App\Http\Controllers\Admin\MessageController::class,'destroy'])->name('admin_message_delete');
         Route::get('show',[\App\Http\Controllers\Admin\MessageController::class,'show'])->name('admin_message_show');
     });
+
+    #Sales
+    Route::prefix('order')->group(function () {
+        // Route assigned name "admin.users"...
+        Route::get('/', [\App\Http\Controllers\Admin\SalesController::class, 'index'])->name('admin_sales');
+        Route::get('list/{status}', [\App\Http\Controllers\Admin\SalesController::class, 'list'])->name('admin_sales_list');
+        Route::post('create', [\App\Http\Controllers\Admin\SalesController::class, 'create'])->name('admin_sales_add');
+        Route::post('store', [\App\Http\Controllers\Admin\SalesController::class, 'store'])->name('admin_sales_store');
+        Route::get('edit/{id}', [\App\Http\Controllers\Admin\SalesController::class, 'edit'])->name('admin_sales_edit');
+        Route::post('update/{id}', [\App\Http\Controllers\Admin\SalesController::class, 'update'])->name('admin_sales_update');
+        Route::post('itemupdate/{id}', [\App\Http\Controllers\Admin\SalesController::class, 'itemupdate'])->name('admin_sales_item_update');
+        Route::get('delete/{id}', [\App\Http\Controllers\Admin\SalesController::class, 'destroy'])->name('admin_sales_delete');
+        Route::get('show/{id}', [\App\Http\Controllers\Admin\SalesController::class, 'show'])->name('admin_sales_show');
+    });
+
     #ProductImage
     Route::prefix('image')->group(function (){
         Route::get('/create/{product_id}',[\App\Http\Controllers\Admin\ImageController::class,'create'])->name('admin_image_add');
@@ -119,7 +134,7 @@ Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
         Route::get('delete/{id}', [ShopcartController::class, 'destroy'])->name('user_shopcart_delete');
     });
 
-    #Order
+    #Sales
     Route::prefix('sales')->group(function () {
         // Route assigned name "admin.users"...
         Route::get('/', [\App\Http\Controllers\SalesController::class, 'index'])->name('user_sales');
@@ -130,7 +145,6 @@ Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
         Route::get('delete/{id}', [\App\Http\Controllers\SalesController::class, 'destroy'])->name('user_sales_delete');
         Route::get('show/{id}', [\App\Http\Controllers\SalesController::class, 'show'])->name('user_sales_show');
     });
-
 
 });
 

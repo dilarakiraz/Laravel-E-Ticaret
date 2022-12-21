@@ -27,7 +27,7 @@
                 <li class="nav-item has-treeview">
                     <a href="{{route('admin_category')}}" class="nav-link">
                         <i class="nav-icon fas fa-copy"></i>
-                        Category
+                        Kategoriler
                     </a>
                 </li>
 
@@ -35,7 +35,7 @@
                     <a href="{{route('admin_products')}}" class="nav-link">
                         <p>
                             <i class="nav-icon fas fa-copy"></i>
-                            Products
+                            Ürünler
                         </p>
                     </a>
                 </li>
@@ -43,7 +43,7 @@
                     <a href="{{route('admin_message')}}" class="nav-link">
                         <p>
                             <i class="nav-icon fas fa-copy"></i>
-                            Contact Messages
+                            Mesajlar
                         </p>
                     </a>
                 </li>
@@ -51,7 +51,7 @@
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="fas fa-circle nav-icon"></i>
-                        <p>Reviews</p>
+                        <p>Yorumlar</p>
                     </a>
                 </li>
 
@@ -65,15 +65,65 @@
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="fas fa-user nav-icon"></i>
-                        <p>Users</p>
+                        <p>Kullanıcılar</p>
                     </a>
                 </li>
+
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-shopping-cart"></i>
+                        <p>
+                            Satışlar
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('admin_sales')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Tüm Satışlar</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>New Orders</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Accepted Orders</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Canceled Orders</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Shipping Orders</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Completed Orders</p>
+                            </a>
+                        </li>
+                    </ul>
+
                 </li>
 
                 <li class="nav-item">
                     <a href="{{route('admin_setting')}}" class="nav-link">
                         <i class="nav-icon far fa-circle text-danger"></i>
-                        <p class="text">Settings</p>
+                        <p class="text">Ayarlar</p>
                     </a>
                 </li>
             </ul>
